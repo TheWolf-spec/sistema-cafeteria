@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Usuarios - Cafeteria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="main-nav">
+            <a href="index.html">Gestion de Productos</a>
+            <a href="usuarios.html" class="active">Gestion de Usuarios</a>
+        </nav>
+        <h1>Gestion de Cuentas de Usuario</h1>
+        
+        <div class="form-container">
+            <h2>Crear Nuevo Usuario</h2>
+            <form id="user-form">
+                <input type="text" id="nombre_completo" placeholder="Nombre completo" required>
+                <input type="email" id="email" placeholder="Correo electronico" required>
+                
+                <select id="rol" required>
+                    <option value="" disabled selected>Seleccione un rol</option>
+                    <option value="cajero">Cajero</option>
+                    <option value="administrador">Administrador</option>
+                </select>
+                
+                <input type="password" id="password" placeholder="Contraseña" required>
+                
+                <div class="buttons">
+                    <button type="submit">Crear Usuario</button>
+                </div>
+            </form>
+        </div>
+        
+        <div class="list-container">
+            <h2>Lista de Usuarios</h2>
+            <div id="user-list">
+                <!-- Los usuarios se cargaran aqui dinamicamente -->
+            </div>
+        </div>
+    </div>
+
+    <script src="usuarios.js"></script>
+</body>
+</html>

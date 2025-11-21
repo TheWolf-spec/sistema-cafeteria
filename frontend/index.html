@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos - Cafetería</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="main-nav">
+            <a href="index.html" class="active">Gestion de Productos</a>
+            <a href="usuarios.html">Gestion de Usuarios</a>
+        </nav>
+        <h1>Gestión de Productos del Menú</h1>
+        <div class="form-container">
+            <form id="product-form">
+                <input type="hidden" id="product-id">
+
+                <input type="text" id="nombre" placeholder="Nombre del producto" required>
+                <textarea id="descripcion" placeholder="Descripción"></textarea>
+                <input type="number" id="precio" placeholder="Precio" step="0.01" required>
+                
+                <select id="categoria" required>
+                    <option value="" disabled selected>Seleccione una categoría</option>
+                    <option value="Bebida">Bebida</option>
+                    <option value="Comida">Comida</option>
+                    <option value="Postre">Postre</option>
+                </select>
+                
+                <div class="disponible-check">
+                    <label for="disponible">Disponible</label>
+                    <input type="checkbox" id="disponible" checked>
+                </div>
+                
+                <div class="buttons">
+                    <button type="submit">Guardar Producto</button>
+                    <button type="button" id="clear-btn">Limpiar Formulario</button>
+                </div>
+            </form>
+        </div>
+        
+        <div class="list-container">
+            <h2>Lista de Productos</h2>
+            <div id="product-list">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

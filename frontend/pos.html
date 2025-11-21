@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punto de Venta (POS) - Cafeteria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="pos-container">
+        <!-- Columna 1: Lista de Productos -->
+        <div class="pos-productos">
+            <h2>Menu</h2>
+            <input type="text" id="search-product" placeholder="Buscar producto...">
+            <div id="product-menu" class="product-grid">
+                <!-- Los productos del menu se cargaran aqui -->
+            </div>
+        </div>
+
+        <!-- Columna 2: Pedido Actual -->
+        <div class="pos-pedido">
+            <h2>Pedido Actual</h2>
+            <div id="pedido-actual" class="pedido-items">
+                <!-- Los items del pedido actual iran aqui -->
+            </div>
+            <div class="pedido-total">
+                <h3>Total: $<span id="total-pedido">0.00</span></h3>
+            </div>
+            <div class="pedido-acciones">
+                <button id="btn-finalizar-pedido">Finalizar Pedido</button>
+                <button id="btn-cancelar-pedido">Cancelar</button>
+            </div>
+        </div>
+
+        <!-- Columna 3: Pedidos Activos -->
+        <div class="pos-activos">
+            <h2>Pedidos Activos</h2>
+            <div id="pedidos-activos-list">
+                <!-- La lista de pedidos por entregar ira aqui -->
+            </div>
+        </div>
+    </div>
+
+    <script src="pos.js"></script>
+</body>
+</html>
