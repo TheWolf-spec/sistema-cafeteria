@@ -72,7 +72,6 @@ button:hover { background-color: #7e4a46; }
     color: white;
 }
 
-/* Estilos para la lista de usuarios */
 .user-item {
     display: grid;
     grid-template-columns: 1fr 150px 150px;
@@ -88,6 +87,7 @@ button:hover { background-color: #7e4a46; }
 .btn-toggle { background-color: #ffc107; color: black; }
 
 /* ======================POS INTERFACE ====================== DOWN*/
+/* Estilos para la interfaz del POS */
 .pos-container {
     display: grid;
     grid-template-columns: 2fr 1.5fr 1fr;
@@ -137,3 +137,188 @@ button:hover { background-color: #7e4a46; }
 .pedido-acciones { margin-top: 15px; display: flex; flex-direction: column; gap: 10px; }
 #btn-finalizar-pedido { background-color: #28a745; }
 #btn-cancelar-pedido { background-color: #dc3545; }
+
+/* Estilos para la seccion de clientes en el POS */
+.cliente-section {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+}
+.cliente-search {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+#search-ci {
+    flex-grow: 1;
+}
+#cliente-info {
+    background-color: #f4f4f9;
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 40px;
+}
+.cliente-info-nombre {
+    font-weight: bold;
+}
+.cliente-info-visitas {
+    color: #007bff;
+    font-size: 0.9em;
+}
+.btn-remover-cliente, .btn-registrar-cliente {
+    background: none;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    font-size: 0.8em;
+    float: right;
+}
+.btn-registrar-cliente {
+    color: #28a745;
+}
+
+/* Estilos para la pagina de login */
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+}
+.login-container {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 350px;
+}
+.login-container h1 {
+    color: #5a2a27;
+    margin-bottom: 20px;
+}
+#login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.error-text {
+    color: #dc3545;
+    font-size: 0.9em;
+    min-height: 20px;
+}
+/*====================================================================================*/
+/* Estilos para los controles del item en el pedido */
+.pedido-item-nombre {
+    flex-grow: 1; /* Empuja los otros elementos a la derecha */
+}
+
+.item-controles {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-cantidad {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #ddd;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.btn-remover-item {
+    background: none;
+    border: none;
+    color: #dc3545;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-left: 10px;
+}
+/* Estilos para los nuevos botones de pago */
+#btn-pagar-efectivo {
+    background-color: #007bff; /* Azul */
+}
+#btn-pagar-tarjeta {
+    background-color: #28a745; /* Verde */
+}
+/*===============================================================================*/
+/* Estilos para la ventana de impresion del ticket */
+.ticket-body {
+    font-family: 'Courier New', Courier, monospace;
+    width: 300px; /* Se supone que esta es la proporcion apra  una impresora de recibos */
+    margin: 0 auto;
+    padding: 10px;
+}
+.ticket-header, .ticket-footer {
+    text-align: center;
+}
+.ticket-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.ticket-table th, .ticket-table td {
+    padding: 5px 0;
+}
+.ticket-table .col-cantidad { text-align: left; }
+.ticket-table .col-precio { text-align: right; }
+/*============================================================================*/
+/* Estilo para el boton de logout */
+#btn-logout {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: auto; /* Empuja el boton a la derecha */
+}
+#btn-logout:hover {
+    background-color: #5a6268;
+}
+
+/*===========================================================================*/
+/* Estilos para la pagina de reportes */
+.report-filters {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #f4f4f9;
+    padding: 15px;
+    border-radius: 8px;
+}
+.report-results {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.result-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+.result-container h3 {
+    margin-top: 0;
+}
+.result-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.result-container th, .result-container td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+}

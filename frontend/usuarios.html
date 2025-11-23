@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <script src="authGuard.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion de Usuarios - Cafeteria</title>
@@ -11,6 +12,8 @@
         <nav class="main-nav">
             <a href="index.html">Gestion de Productos</a>
             <a href="usuarios.html" class="active">Gestion de Usuarios</a>
+            <a href="reportes.html">Reportes</a>
+            <button id="btn-logout">Cerrar Sesion</button>
         </nav>
         <h1>Gestion de Cuentas de Usuario</h1>
         
@@ -37,7 +40,6 @@
         <div class="list-container">
             <h2>Lista de Usuarios</h2>
             <div id="user-list">
-                <!-- Los usuarios se cargaran aqui dinamicamente -->
             </div>
         </div>
     </div>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="authGuard.js"></script>
+    <title>Reportes - Sistema Cafeteria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="main-nav">
+            <a href="index.html">Gestion de Productos</a>
+            <a href="usuarios.html">Gestion de Usuarios</a>
+            <a href="reportes.html" class="active">Reportes</a>
+            <button id="btn-logout">Cerrar Sesion</button>
+        </nav>
+        <h1>Reportes de Ventas</h1>
+
+        <div class="report-filters">
+            <label for="fecha-inicio">Fecha de Inicio:</label>
+            <input type="date" id="fecha-inicio">
+            <label for="fecha-fin">Fecha de Fin:</label>
+            <input type="date" id="fecha-fin">
+        </div>
+
+        <div class="buttons">
+            <button id="btn-generar-ventas">Generar Reporte de Ventas</button>
+            <button id="btn-generar-top-productos">Generar Top Productos</button>
+        </div>
+
+        <div class="report-results">
+            <div id="resultado-ventas" class="result-container"></div>
+            <div id="resultado-top-productos" class="result-container"></div>
+        </div>
+    </div>
+    <script src="reportes.js"></script>
+</body>
+</html>

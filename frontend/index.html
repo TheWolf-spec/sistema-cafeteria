@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <script src="authGuard.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Productos - Cafetería</title>
+    <title>Gestion de Productos - Cafetería</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,8 +12,10 @@
         <nav class="main-nav">
             <a href="index.html" class="active">Gestion de Productos</a>
             <a href="usuarios.html">Gestion de Usuarios</a>
+            <a href="reportes.html">Reportes</a>
+            <button id="btn-logout">Cerrar Sesion</button>
         </nav>
-        <h1>Gestión de Productos del Menú</h1>
+        <h1>Gestion de Productos del Menú</h1>
         <div class="form-container">
             <form id="product-form">
                 <input type="hidden" id="product-id">

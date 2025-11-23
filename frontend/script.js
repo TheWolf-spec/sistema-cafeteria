@@ -116,3 +116,7 @@ async function handleDelete(id) {
         }
     }
 }
+document.getElementById('btn-logout').addEventListener('click', () => {
+    sessionStorage.removeItem('user')
+    window.location.href = 'login.html'
+})

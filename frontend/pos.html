@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <script src="authGuard.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Punto de Venta (POS) - Cafeteria</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="main-nav">
+        <a href="pos.html" class="active">Punto de Venta</a>
+        <!-- NUEVO BOTON -->
+        <button id="btn-logout">Cerrar Sesion</button>
+    </nav>
     <div class="pos-container">
         <!-- Columna 1: Lista de Productos -->
         <div class="pos-productos">
@@ -20,6 +26,17 @@
         <!-- Columna 2: Pedido Actual -->
         <div class="pos-pedido">
             <h2>Pedido Actual</h2>
+            
+            <div class="cliente-section">
+                <div class="cliente-search">
+                    <input type="text" id="search-ci" placeholder="Buscar CI del cliente...">
+                    <button id="btn-buscar-cliente">Buscar</button>
+                </div>
+                <div id="cliente-info">
+                    <!-- La informacion del cliente aparecera aqui -->
+                </div>
+            </div>
+
             <div id="pedido-actual" class="pedido-items">
                 <!-- Los items del pedido actual iran aqui -->
             </div>
@@ -27,8 +44,11 @@
                 <h3>Total: $<span id="total-pedido">0.00</span></h3>
             </div>
             <div class="pedido-acciones">
-                <button id="btn-finalizar-pedido">Finalizar Pedido</button>
-                <button id="btn-cancelar-pedido">Cancelar</button>
+                <!-- BOTONES MODIFICADOS -->
+                <button id="btn-pagar-efectivo">Pagar con Efectivo</button>
+                <button id="btn-pagar-tarjeta">Pagar con Tarjeta</button>
+                <button id="btn-cancelar-pedido">Cancelar Pedido</button>
+                <button id="btn-cierre-caja" class="btn-secondary">Cierre de Caja</button>
             </div>
         </div>
 
